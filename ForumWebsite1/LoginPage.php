@@ -26,9 +26,9 @@
       $myusername = mysqli_real_escape_string($db,$_POST['Username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['Password']); 
       
-      $sql = "SELECT id FROM users WHERE Username = '$myusername' and Password = '$mypassword'";
+      $sql = "SELECT id FROM users WHERE Uname = '$myusername' and Pword = '$mypassword'";
       $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
       $active = $row['active'];
       
       $count = mysqli_num_rows($result);
@@ -79,8 +79,8 @@
     <div class="container">
         
     <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post">
-    <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-    <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+    <label>UserName  :</label><input type = "text" name = "Username" class = "box"/><br /><br />
+    <label>Password  :</label><input type = "password" name = "Password" class = "box" /><br/><br />
     <input type = "submit" value = " Submit "/><br />
     </form>
         
