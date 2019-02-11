@@ -17,10 +17,35 @@ Date Created: 11/02/19
     
  ```
 
-4)	Create database called forum, add two tables; users and topic1. Refer to “Database User fourms.PNG” and “Database structure Form.PNG”
-5)	In users table, create attributes: UserID, username, password
-6)	In topic table, create attribute: Topic ID and comment
+4)	Create database called forum in MY SQL using the graphical user interface.
+
+5)	Create users table, create attributes: UserID, username, password.
+
+```
+
+CREATE TABLE `users` (
+  `UserID` int(11) NOT NULL,
+  `Uname` text NOT NULL,
+  `Pword` text NOT NULL,
+  `Role` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+```
+
+6)	Create topic table, create attribute: Topic ID and comment
+
+```
+
+CREATE TABLE `topic1` (
+  `TopicID` int(11) NOT NULL,
+  `Comment` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+```
+
+
 7)	Create PHP config file include the following code 
+
 ```
 
 <?php
